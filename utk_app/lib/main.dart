@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/inventory_screen.dart';
 
 void main() {
   runApp(const UTKApp());
@@ -56,10 +57,12 @@ class UTKDashboard extends StatelessWidget {
                 crossAxisSpacing: 15,
                 mainAxisSpacing: 15,
                 children: [
-                   _buildTacticalCard('Courses', Icons.school, Colors.blueAccent),
-                   _buildTacticalCard('Equipment', Icons.shield, Colors.grey),
-                   _buildTacticalCard('Techniques', Icons.military_tech, Colors.orangeAccent),
-                   _buildTacticalCard('Community', Icons.groups, Colors.blueAccent),
+                   _buildTacticalCard(context, 'Courses', Icons.school, Colors.blueAccent),
+                   _buildTacticalCard(context, 'Equipment', Icons.shield, Colors.grey, onTap: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => const InventoryScreen()));
+                   }),
+                   _buildTacticalCard(context, 'Techniques', Icons.military_tech, Colors.orangeAccent),
+                   _buildTacticalCard(context, 'Community', Icons.groups, Colors.blueAccent),
                 ],
               ),
             ),
@@ -78,34 +81,37 @@ class UTKDashboard extends StatelessWidget {
     );
   }
 
-  Widget _buildTacticalCard(String title, IconData icon, Color accent) {
-    return Container(
-      decoration: BoxDecoration(
-        color: const Color(0xFF1E293B),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.white10),
-        boxShadow: [
-          BoxShadow(
-            color: accent.withOpacity(0.05),
-            blurRadius: 10,
-            spreadRadius: 2,
-          )
-        ],
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, size: 40, color: accent),
-          const SizedBox(height: 15),
-          Text(
-            title.toUpperCase(),
-            style: const TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.2,
+  Widget _buildTacticalCard(BuildContext context, String title, IconData icon, Color accent, {VoidCallback? onTap}) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color(0xFF1E293B),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: Colors.white10),
+          boxShadow: [
+            BoxShadow(
+              color: accent.withOpacity(0.05),
+              blurRadius: 10,
+              spreadRadius: 2,
+            )
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(icon, size: 40, color: accent),
+            const SizedBox(height: 15),
+            Text(
+              title.toUpperCase(),
+              style: const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.2,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
