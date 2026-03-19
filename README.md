@@ -23,7 +23,8 @@ A high-fidelity, interactive 3D web experience for **Universal Tactical Knife Mo
 ## 🛠️ Tech Stack
 
 - **Core**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **3D Engine**: [Three.js](https://threejs.org/) via [React Three Fiber (R3F)](https://docs.pmnd.rs/react-three-fiber/)
+- **Web Engine**: [Three.js](https://threejs.org/) via [React Three Fiber (R3F)](https://docs.pmnd.rs/react-three-fiber/)
+- **Mobile Engine**: [Flutter](https://flutter.dev/) (Dart)
 - **3D Utilities**: [@react-three/drei](https://github.com/pmndrs/drei)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
 - **Icons**: [Lucide React](https://lucide.dev/)
@@ -31,30 +32,35 @@ A high-fidelity, interactive 3D web experience for **Universal Tactical Knife Mo
 
 ## 🚀 Getting Started
 
-### Installation
+### Web Application
 ```bash
-# Install dependencies
+# Navigate to web root
 npm install
-
-# Start the development server
 npm run dev
 ```
 
-### Build for Production
+### Mobile Application
 ```bash
-npm run build
+# Navigate to mobile root
+cd utk_app
+flutter pub get
+flutter run
 ```
 
 ---
 
 ## 🏗️ Project Architecture
 
-The core interactive experience is centered in `src/components/Scene.jsx`, where the `TacticalKnife` is generated procedurally:
+The **UTK Moldova** ecosystem consists of two primary applications:
 
-1. **Blade**: Curved leaf-style geometry with a central dark fuller groove.
-2. **Crossguard**: Triangular central guard with symmetrical sweeping horns and custom "MD Area" overlays.
-3. **Handle**: Multi-segment grip with metallic separators and textured finishes.
-4. **Pommel**: Flared tactical base with a clean V-point termination.
+### 🌐 Web Portal (React)
+The high-performance interactive 3D landing page located in the root `/src` directory.
+- **Blade & Scene**: Procedural 3D geometry and scroll-driven narratives.
+
+### 📱 UTK App (Flutter)
+A native cross-platform mobile portal located in `/utk_app`.
+- **Dashboard**: High-fidelity tactical dashboard for courses, equipment, and community management.
+- **Unified Aesthetic**: Shared dark/matte design system across platforms.
 
 ## 🛤️ Roadmap
 
