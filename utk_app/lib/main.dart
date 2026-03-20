@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/inventory_screen.dart';
+import 'screens/techniques_screen.dart';
 
 void main() {
   runApp(const UTKApp());
@@ -61,7 +62,9 @@ class UTKDashboard extends StatelessWidget {
                    _buildTacticalCard(context, 'Equipment', Icons.shield, Colors.grey, onTap: () {
                      Navigator.push(context, MaterialPageRoute(builder: (context) => const InventoryScreen()));
                    }),
-                   _buildTacticalCard(context, 'Techniques', Icons.military_tech, Colors.orangeAccent),
+                   _buildTacticalCard(context, 'Techniques', Icons.military_tech, Colors.orangeAccent, onTap: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => const TechniquesScreen()));
+                   }),
                    _buildTacticalCard(context, 'Community', Icons.groups, Colors.blueAccent),
                 ],
               ),
