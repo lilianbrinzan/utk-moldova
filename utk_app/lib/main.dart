@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'screens/inventory_screen.dart';
 import 'screens/techniques_screen.dart';
+import 'screens/courses_screen.dart';
+import 'screens/community_screen.dart';
 
 void main() {
   runApp(const UTKApp());
@@ -58,14 +60,18 @@ class UTKDashboard extends StatelessWidget {
                 crossAxisSpacing: 15,
                 mainAxisSpacing: 15,
                 children: [
-                   _buildTacticalCard(context, 'Courses', Icons.school, Colors.blueAccent),
+                   _buildTacticalCard(context, 'Courses', Icons.school, Colors.blueAccent, onTap: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => const CoursesScreen()));
+                   }),
                    _buildTacticalCard(context, 'Equipment', Icons.shield, Colors.grey, onTap: () {
                      Navigator.push(context, MaterialPageRoute(builder: (context) => const InventoryScreen()));
                    }),
                    _buildTacticalCard(context, 'Techniques', Icons.military_tech, Colors.orangeAccent, onTap: () {
                      Navigator.push(context, MaterialPageRoute(builder: (context) => const TechniquesScreen()));
                    }),
-                   _buildTacticalCard(context, 'Community', Icons.groups, Colors.blueAccent),
+                    _buildTacticalCard(context, 'Community', Icons.groups, Colors.blueAccent, onTap: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => const CommunityScreen()));
+                   }),
                 ],
               ),
             ),
