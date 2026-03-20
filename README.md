@@ -66,7 +66,8 @@ A native cross-platform mobile portal located in `/utk_app`.
 
 - [x] **TypeScript Migration**: Full project conversion from `.jsx` to `.tsx` with type-safe R3F components.
 - [x] **React Compiler**: Enabled via Babel plugin for automated component memoization.
-- [ ] **Advanced Shaders**: Implement custom GLSL shaders for carbon-fiber and Damascus steel visual effects.
+- [x] **Advanced Shaders**: Implement custom GLSL shaders for carbon-fiber and Damascus steel visual effects.
+- [x] **Mobile App**: Initialized Flutter ecosystem with a tactical dashboard.
 
 ## ⚖️ License
 
