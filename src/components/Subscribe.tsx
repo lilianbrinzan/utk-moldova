@@ -12,7 +12,7 @@ const Subscribe = () => {
         transition={{ duration: 0.6, type: 'spring' }}
         style={{ textAlign: 'center' }}
       >
-        <h2>+_+</h2>
+        <h2>UTK</h2>
         <p>
           Join our YouTube & community for training updates.
         </p>
