@@ -11,18 +11,12 @@ const About = () => {
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, type: 'spring' }}
       >
-        <h2>The UTK Philosophy</h2>
+        <h2>UTK Moldova</h2>
         <p>
-          Universal Tactical Knife Moldova (UTK) focuses primarily on survival, situational awareness, distance/time principles, and disarming the opponent. 
-        </p>
-        <p>
-          More than just a physical discipline, UTK is an information portal that explains fundamental concepts of movement efficiency and energy economy for everyday self-defense.
-        </p>
-        <p>
-          Our platform digitizes a traditional art, building a community and serving as a benchmark for student progression—from novice to advanced practitioner.
+          Survival, situational awareness, distance/time & disarming. 
         </p>
         <a href="https://ving-tsun-kung-fu.com/training/" target="_blank" rel="noopener noreferrer">
-          <button className="primary-btn" style={{ marginTop: '1rem' }}>Read Curriculum</button>
+          <button className="primary-btn" style={{ marginTop: '1rem' }}>Curriculum</button>
         </a>
       </motion.div>
     </section>

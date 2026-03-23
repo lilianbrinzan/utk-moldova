@@ -12,14 +12,14 @@ const Subscribe = () => {
         transition={{ duration: 0.6, type: 'spring' }}
         style={{ textAlign: 'center' }}
       >
-        <h2>Evolution through Knowledge</h2>
+        <h2>+_+</h2>
         <p>
-          Subscribe to our YouTube channel or join the community to get the latest insights, training techniques, and updates.
+          Join our YouTube & community for training updates.
         </p>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '2rem' }}>
           <a href="https://www.youtube.com/@ghenadieceban4197" target="_blank" rel="noopener noreferrer">
             <button className="primary-btn" style={{ background: '#ef4444' }}>
-              Subscribe on YouTube
+              YouTube
             </button>
           </a>
         </div>

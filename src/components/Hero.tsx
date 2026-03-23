@@ -26,7 +26,7 @@ const Hero = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Universal Tactical Knife (UTK) is a study group that develops blade defense skills of different martial arts, implementing the most simple and effective techniques, tactics, and strategies of knife attacks survival!
+          Blade Defense Study Group
         </motion.p>
       </motion.div>
     </section>
