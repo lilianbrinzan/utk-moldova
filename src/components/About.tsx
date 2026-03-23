@@ -11,7 +11,7 @@ const About = () => {
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, type: 'spring' }}
       >
-        <h2>UTK Moldova</h2>
+        <h2>UTK</h2>
         <p>
           Survival, situational awareness, distance/time & disarming. 
         </p>

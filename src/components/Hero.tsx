@@ -26,7 +26,7 @@ const Hero = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Blade Defense Study Group
+          BladeDefenseStudyGroup
         </motion.p>
       </motion.div>
     </section>
