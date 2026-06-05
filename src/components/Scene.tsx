@@ -179,19 +179,20 @@ const Scene: React.FC = () => {
 
   useFrame(() => {
     if (group.current) {
-      const r1 = scroll.range(0, 1 / 3);
-      const r2 = scroll.range(1 / 3, 1 / 3);
-      const r3 = scroll.range(2 / 3, 1 / 3);
+      const r1 = scroll.range(0, 1 / 4);
+      const r2 = scroll.range(1 / 4, 1 / 4);
+      const r3 = scroll.range(2 / 4, 1 / 4);
+      const r4 = scroll.range(3 / 4, 1 / 4);
 
-      const targetX = r1 * 2 + (r2 * 0) - (r3 * 2); 
-      const targetY = r1 * 1 - r2 * 2 + r3 * 1;
-      const targetZ = -r1 * 2 + r2 * 1 + r3 * 3;
+      const targetX = r1 * 2.2 + r2 * 0 - r3 * 4.4 + r4 * 2.2; 
+      const targetY = r1 * 0.5 - r2 * 0.3 - r3 * 0.7 + r4 * 1.0;
+      const targetZ = -r1 * 1.0 - r2 * 0.5 + r3 * 1.5 + r4 * 2.5;
 
       group.current.position.x = THREE.MathUtils.lerp(group.current.position.x, targetX, 0.1);
       group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, targetY, 0.1);
       group.current.position.z = THREE.MathUtils.lerp(group.current.position.z, targetZ, 0.1);
       
-      const targetRotationY = r1 * Math.PI * 2 + r2 * Math.PI - r3 * Math.PI;
+      const targetRotationY = r1 * Math.PI + r2 * Math.PI + r3 * Math.PI - r4 * Math.PI;
       group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, targetRotationY, 0.1);
     }
   });
