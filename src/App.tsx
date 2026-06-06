@@ -20,7 +20,7 @@ function App() {
       
       if (hash === '#about') pageIndex = 1;
       else if (hash === '#affiliation') pageIndex = 2;
-      else if (hash === '#subscribe') pageIndex = 3;
+      else if (hash === '#info') pageIndex = 3;
       else if (hash === '#contact') pageIndex = 4;
       else if (hash === '#home') pageIndex = 0;
       else return; // If hash is empty or unrecognized, do nothing

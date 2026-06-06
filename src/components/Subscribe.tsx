@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Subscribe = () => {
   return (
-    <section className="subscribe-section" id="subscribe">
+    <section className="subscribe-section" id="info">
       <motion.div 
         className="content-block glass-card"
         initial={{ opacity: 0, scale: 0.8 }}

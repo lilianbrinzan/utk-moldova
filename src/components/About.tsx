@@ -9,6 +9,7 @@ const About = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, type: 'spring' }}
+        style={{ textAlign: 'center' }}
       >
         <h2>UTK</h2>
         <p>

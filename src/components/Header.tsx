@@ -20,9 +20,7 @@ const Header = () => {
         </a>
       </div>
       <nav className="header-nav">
-        <a href="#about" className="nav-link">About</a>
-        <a href="#affiliation" className="nav-link">Affiliation</a>
-        <a href="#subscribe" className="nav-link">Subscribe</a>
+        <a href="#info" className="nav-link">Info</a>
         <a href="#contact" className="nav-link">Contact</a>
       </nav>
     </motion.header>
